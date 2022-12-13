@@ -15,10 +15,14 @@ include = [
     "bin/**/*.s",
     "bin/libt4start.a",
     "bin/libt4usb.a",
+    "bin/libt40eeprom.a",
+    "bin/libt41eeprom.a",
     "bin/Makefile",
+    "examples/*",
     "src/*",
     "build.rs",
-    "t4link.x",
+    "t40link.x",
+    "t41link.x",
     "README.md",
     "LICENSE-*"
 ]
@@ -90,6 +94,8 @@ systick = ["embedded-hal"]
 rtic = ["imxrt-hal/rtic"]
 # Enables cortex-m-rt runtime support
 rt = ["cortex-m-rt", "imxrt-hal/rt"]
+# Enables compilation for Teensy 4.1
+t41 = []
 
 # Don't optimize build dependencies, like proc macros.
 # Helps with build times.
